@@ -1,15 +1,15 @@
 const router = require('express').Router();
 const user = require('./userRouter');
 const task = require('./taskRouter');
-const { authentication } = require('../middlewares/auth');
+const { authenticate } = require('../middlewares/auth');
 
 router.get('/', (req, res) => {
-    res.send('Welcome to KanbanBuzz REST API!')
+    res.send('Welcome!')
 })
 
 router.use(user);
 
-router.use(authentication);
+router.use(authenticate);
 
 router.use('/tasks', task);
 
