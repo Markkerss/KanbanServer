@@ -225,7 +225,7 @@ _Errors_
 ---
 ## 6. POST /tasks
 
-> Add a new product
+> Add a new task
 
 _Request Header_
 ```
@@ -311,7 +311,7 @@ _Errors_
 ---
 ## 8. DELETE /tasks/:id
 
-> Delete an existing product
+> Delete an existing task 
 
 _Request Header_
 ```
