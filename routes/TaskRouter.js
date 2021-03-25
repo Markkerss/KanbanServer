@@ -1,4 +1,4 @@
-const TaskController = require('../controllers/taskController');
+const TaskController = require('../controllers/TaskController');
 const { authorize } = require('../middlewares/auth');
 const router = require('express').Router();
 
