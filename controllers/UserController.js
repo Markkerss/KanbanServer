@@ -2,7 +2,6 @@ const { signToken } = require('../helpers/jwt')
 const { checkPass } = require('../helpers/passwordHelper')
 const { User } = require('../models')
 const { OAuth2Client } = require('google-auth-library')
-const { sign } = require('jsonwebtoken')
 
 class UserController {
     static login (req, res, next) {
