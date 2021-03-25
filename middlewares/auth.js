@@ -4,6 +4,7 @@ const { User, Task } = require('../models');
 function authenticate (req, res, next) {
     try {
         let isUser = verifyToken(req.headers.access_token);
+        console.log(isUser, '<<<<<<helllooo')
         User.findByPk(isUser.id)
         .then(data => {
             if (!data) {

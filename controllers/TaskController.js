@@ -58,7 +58,6 @@ class TaskController {
             detail: req.body.detail,
             category: req.body.category
         };
-
         Task.update(updatedTask, {
             where: {
                 id

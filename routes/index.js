@@ -1,13 +1,11 @@
 const router = require('express').Router();
-const user = require('./userRouter');
 const task = require('./taskRouter');
+const UserController = require('../controllers/UserController');
 const { authenticate } = require('../middlewares/auth');
 
-router.get('/', (req, res) => {
-    res.send('Welcome!')
-})
-
-router.use(user);
+router.post('/register', UserController.register);
+router.post('/login', UserController.login);
+router.post('/google-login', UserController.googleLogin)
 
 router.use(authenticate);
 

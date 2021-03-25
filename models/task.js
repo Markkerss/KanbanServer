@@ -2,7 +2,7 @@
  const {
    Model
  } = require('sequelize');
- module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
    class Task extends Model {
      /**
       * Helper method for defining associations.
@@ -15,7 +15,15 @@
      }
    };
    Task.init({
-      detail: DataTypes.STRING,
+      detail: {
+        type: DataTypes.STRING,
+        validate: {
+          notEmpty: {
+            args: true,
+            msg: 'Detail is required'
+          }
+        }
+      },
       category: {
         type: DataTypes.STRING,
         validate: {
@@ -26,13 +34,7 @@
         }
       },
       UserId: {
-        type: DataTypes.INTEGER,
-        validate: {
-          notEmpty: {
-            args: true,
-            msg: 'UserId is required'
-          }
-        }
+        type: DataTypes.INTEGER
       }
     }, {
       sequelize,
