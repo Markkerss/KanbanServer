@@ -8,14 +8,14 @@ function authenticate (req, res, next) {
         User.findByPk(isUser.id)
         .then(data => {
             if (!data) {
-                next({code: 404, message: 'User not found'});
+                next({code: 400, message: 'Please Log In'});
             } else {
                 req.currentUser = {id: data.id, email: data.email};
                 next();
             }
         })
     } catch (err) {
-        next({code: 403, message: "Please login"});
+        next({code: 400, message: 'Please Log In'});
     }
 }
 

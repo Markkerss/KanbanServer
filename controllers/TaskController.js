@@ -72,20 +72,6 @@ class TaskController {
         })
     }
 
-    static changeCategory (req, res, next) {
-        let id = +req.params.id;
-        let newCat = {
-            category: req.body.category
-        }
-        Task.update(newCat, {where: {id}, returning: true})
-            .then(data => {
-                res.status(200).json(data[1]);
-            })
-            .catch(err => {
-                next(err)
-            })
-    }
-
     static deleteTask (req, res, next) {
         let id = +req.params.id;
         Task.destroy({where: {id}})
