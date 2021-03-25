@@ -1,6 +1,5 @@
-# E-commerce CMS and Customer Server
-This E-commerce CMS App is an application for an admin to control the contents of an e-commerce store. 
-This E-Commerce Customer App is an application where customers can buy products from previously stated e-commerce store and put said products into a designated cart.
+# Kanban App
+This Kanban App is an application to control one's progress in certain tasks. 
 These apps have : 
 * RESTful endpoints for authentication, authorization and getting APIs
 * JSON formatted response
