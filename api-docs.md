@@ -309,7 +309,7 @@ _Errors_
 ```
 
 ---
-## 7. DELETE /tasks/:id
+## 8. DELETE /tasks/:id
 
 > Delete an existing product
 
